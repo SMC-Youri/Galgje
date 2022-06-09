@@ -1,0 +1,16 @@
+word_list = [
+  'playstation',
+  'informatica',
+  'informatiekunde',
+  'spelletje',
+  'aardigheidje',
+  'scholier',
+  'fotografie',
+  'waardebepaling',
+  'specialiteit',
+  'verzekering',
+  'universiteit',
+  'heesterperk',
+  'appeltaart',
+  'controller',
+]
