@@ -11,6 +11,7 @@ def play(word):
   guessed = False
   guessed_letters = []
   guessed_words = []
+  false_letters = []
   tries = 6
   print("Welkom bij galgje!")
   print(display_hangman(tries))
@@ -21,16 +22,19 @@ def play(word):
     if len(guess) == 1 and guess.isalpha():
       if guess in guessed_letters:
         print("Je hebt", guess, "al geraden!")
+        print(sorted(false_letters))
       elif guess not in word:
         print(guess, "zit helaas niet in het woord...")
         tries -= 1
         guessed_letters.append(guess)
-        print(sorted(guessed_letters))
+        false_letters.append(guess)
+        print(sorted(false_letters))
       else:
         print("Goed gedaan", guess, "zit in het woord!")
         guessed_letters.append(guess)
         word_as_list = list(word_completion)
         indices = [i for i, letter in enumerate(word) if letter == guess]
+        print(sorted(false_letters))
         for index in indices:
           word_as_list[index] = guess
         word_completion = "".join(word_as_list)
