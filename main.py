@@ -25,6 +25,7 @@ def play(word):
         print(guess, "zit helaas niet in het woord...")
         tries -= 1
         guessed_letters.append(guess)
+        print(sorted(guessed_letters))
       else:
         print("Goed gedaan", guess, "zit in het woord!")
         guessed_letters.append(guess)
